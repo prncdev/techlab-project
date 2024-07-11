@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "rsuite/dist/rsuite.css";
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+
+/* This is for indicating currently selected nav item */
+li.before-pseudo-indicator {
+  display: block;
+  position: relative;
+}
+.before-pseudo-indicator::before {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 100%;
+  top: 0;
+  left: -83%;
+  border-radius: 8px;
+  background: #025aab;
+  cursor: default;
+}
+
+/* Style for date range picker */
+div.rs-picker {
+  border-radius: .25rem;
+  /* border: 1px solid #ced0d4; */
+}
+
+div.rs-picker:hover {
+  border: none;
+}
+div.rs-picker div.rs-picker-input-group {
+  border-radius: .25rem;
+  border: 2px solid #d1d5db;
+}
+
+div.rs-picker div.rs-picker-input-group:hover {
+  border-color: #d1d5db;
+}
+
+div.rs-picker div.rs-picker-input-group input {
+  padding-block: 0.6rem;
+}
